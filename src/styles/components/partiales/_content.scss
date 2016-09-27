@@ -1,0 +1,45 @@
+$module: "content";
+
+.#{$module} {
+
+  .product-box {
+
+    min-height: $height-base * 2 - 40;
+    background-color: $color-1;
+    color: $color-2;
+    margin: $gap-base /10 0;
+    display: table;
+    width: 100%;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      min-height: $height-base + 60;
+    }
+    @include breakpoint(desktop) {
+      min-height: $height-base + 60;
+    }
+
+  }
+
+  .caption {
+    display: table-cell;
+    vertical-align: middle;
+    h3 {
+      position: relative;
+      width: 50%;
+      margin: 0 auto;
+      font-size: 22px;
+    }
+    h3:after {
+      content: '';
+      position: absolute;
+      width: $size-base - 70;
+      height: $size-base / 20 - 1;
+      background-color: $color-3;
+      bottom: -$size-base / 10;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+}

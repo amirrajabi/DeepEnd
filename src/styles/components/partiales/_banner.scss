@@ -1,0 +1,84 @@
+$module: "banner";
+
+.#{$module} {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: $height-base * 2.5;
+  background-color: $color-1;
+  color: $white;
+  margin-bottom: 15px;
+
+  @include breakpoint(not-mobile) {
+    min-height: $height-base * 5;
+  }
+
+  text-align: center;
+
+  &__heading {
+    font-family: LatoBlack;
+    font-size: 45px;
+    line-height: 45px;
+    @include breakpoint(not-mobile) {
+      font-size: $size-base + 3;
+      line-height: $size-base + 3;
+    }
+  }
+
+  &__subheading {
+    position: relative;
+    font-family: LatoBlack;
+    margin-bottom: 50px;
+    font-size: 28px;
+    line-height: 28px;
+    @include breakpoint(not-mobile) {
+      font-size: $size-base / 2;
+      line-height: $size-base / 2;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: $size-base - 40;
+      height: $size-base / 20 - 2;
+      background-color: $color-3;
+      bottom: - ($size-base / 5 + 4);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__buttons {
+    .btn {
+      border: 3px solid currentColor;
+      color: $white;
+
+      border-radius: $zero;
+      text-transform: uppercase;
+      font-family: LatoRegular;
+      font-size: 12px;
+      padding: 6px 15px;
+      margin-right: 10px;
+      @include breakpoint(not-mobile) {
+        padding: 10px 23px;
+        margin-right: 25px;
+        font-size: 16px;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @include breakpoint(tablet) {
+    min-height: $height-base * 5;
+  }
+
+  @include breakpoint(desktop) {
+    min-height: $height-base * 6;
+  }
+}
+
+
