@@ -1,4 +1,4 @@
-# Deepend Ancestry
+# Deepend Front End Test
 
 ## Get Started
 1. **Initial Machine Setup**. First time running the starter kit? Then complete the [Initial Machine Setup](https://github.com/amirrajabi/deepend.git#initial-machine-setup).
