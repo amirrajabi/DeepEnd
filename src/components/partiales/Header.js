@@ -70,8 +70,13 @@ class Header extends React.Component {
             <a href="#"
                className="account hidden-xs">my account</a>
             <a href="#"
-               className="cart"><span className="hidden-xs">cart /</span><span className="total">${this.state.data.total}</span></a>
-            <span className="glyphicon glyphicon-shopping-cart">{this.state.data.items}</span>
+               className="cart">
+              <span className="hidden-xs">cart /</span>
+              <span className="total">${this.state.data.total}</span>
+            </a>
+            <span className="glyphicon glyphicon-shopping-cart">
+              <span className="items">{this.state.data.items}</span>
+            </span>
           </div>
         </Navbar>
 
